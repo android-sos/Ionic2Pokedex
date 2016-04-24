@@ -1,10 +1,10 @@
-<ion-navbar *navbar hideBackButton>
-  <ion-title>
-    Lista de Pokemones
-  </ion-title>
+<ion-navbar *navbar primary>
+    <ion-title>
+        <strong>Lista de pokemones</strong>
+    </ion-title>
 </ion-navbar>
-
 <ion-content>
+    <loader text="Cargando Pokedex..." *ngIf="!pokemons.length"></loader>
     <ion-searchbar [(ngModel)]="searchQuery" (input)="getItems($event)"></ion-searchbar>
     <ion-list>
         <a ion-item *ngFor="#pokemon of pokemons" (click)="goToDetail(pokemon)" href="#">
