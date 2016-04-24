@@ -1,0 +1,68 @@
+<ion-navbar *navbar primary>
+    <ion-title>
+        <strong *ngIf="pokemon">{{ pokemon.name }}</strong>
+    </ion-title>
+</ion-navbar>
+<ion-content>
+  <loader text="Loading Pokemon..." *ngIf="!pokemon"></loader>
+    <div *ngIf="pokemon">
+        <img class="pokemon-image" src="build/img/pokemons/{{ pokemon.name }}.jpg">
+        <div class="stats">
+            <div>
+                <h3>{{ pokemon.species }}</h3> Weight
+            </div>
+            <div>
+                <h3>{{ pokemon.weight }}</h3> Weight
+            </div>
+            <div>
+                <h3>{{ pokemon.height }}</h3> Height
+            </div>
+        </div>
+        <div class="stats">
+            <div>
+                <h3>{{ pokemon.stats.attack }}</h3> Attack
+            </div>
+            <div>
+                <h3>{{ pokemon.stats.defense }}</h3> Defense
+            </div>
+            <div>
+                <h3>{{ pokemon.stats.hp }}</h3>
+                <icon heart></icon> HP
+            </div>
+            <div>
+                <h3>{{ pokemon.stats.speed }}</h3> Speed
+            </div>
+        </div>
+        <div class="stats">
+
+            <div>
+                <h3>{{ pokemon.stats.total }}</h3> Total
+            </div>
+           
+        </div>
+        <hr style="margin: 30px 0" />
+        <div>
+            <ion-list>
+              <ion-list-header>Evolutions</ion-list-header>
+                <p padding *ngIf="!pokemon.evolution.length">No Evolutions</p>
+                <a ion-item *ngFor="#evolution of pokemon.evolution">
+                    <span>
+                      <strong>{{ evolution}}</strong>
+                    </span>
+                </a>
+            </ion-list>
+        </div>
+        <div>
+            <ion-list-header>Abilities</ion-list-header>
+            <p padding *ngIf="!pokemon.evolution.length">No Abilities</p>
+            <ion-list>
+                <a ion-item *ngFor="#ability of pokemon.abilities" href="#">
+                    <span>
+                      <strong>{{ ability }}</strong>
+                    </span>
+                </a>
+            </ion-list>
+        </div>
+    </div>
+</ion-content>
+
