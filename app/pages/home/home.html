@@ -1,0 +1,69 @@
+
+<ion-navbar *navbar hideBackButton class="show-navbar">
+  <ion-title>IONIC POKEDEX</ion-title>
+</ion-navbar>
+
+<ion-content class="has-header">
+
+<ion-card>
+
+  <ion-item>
+    <ion-avatar item-left>
+      <img src="build/img/pokemons/abra.jpg">
+    </ion-avatar>
+    <h2>SAMUEL OSPINA</h2>
+    <p>Abril 2016</p>
+  </ion-item>
+
+  <ion-card-content>
+    <p>
+      Meanwhile, Ionic 2 is growing every day, Always I'am very motivated to test, build and evaluate new technology
+      especially is it has a power of Angular embeded in its bones. 
+    </p>
+  </ion-card-content>
+
+  <ion-row>
+    <ion-col>
+      <button primary clear small>
+        <ion-icon name='thumbs-up'></ion-icon>
+        <div>666 Likes</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button primary clear small>
+        <ion-icon name='text'></ion-icon>
+        <div>666 Comments</div>
+      </button>
+    </ion-col>
+    <ion-col center text-center>
+      <ion-note>
+       7h ago
+      </ion-note>
+    </ion-col>
+  </ion-row>
+
+</ion-card>
+
+  <p>
+    <button block block (click)="mostraLista1()">Busqueda x nombre</button>
+  </p>
+
+  <p>
+    <button secondary block (click)="mostraLista2()">Busqueda x Categorias</button>
+  </p>
+
+  <p>
+    <button danger block>2</button>
+  </p>
+
+  <p>
+    <button dark block>3</button>
+  </p>
+ 
+</ion-content>
+
+<style>
+  .social-cards ion-col {
+    padding: 5;
+  }
+</style>
