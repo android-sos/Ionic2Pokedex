@@ -1,6 +1,6 @@
 # Ionic2Pokedex
 
-Welcome to the Ionic2Pokede.
+Welcome to the Ionic 2 Pokedex.
 
 Ionic 2, Angular 2, Typescript.
 
