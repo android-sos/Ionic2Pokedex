@@ -39,6 +39,8 @@ gulp.task('watch', ['clean'], function(done){
   runSequence(
     ['sass', 'html', 'fonts', 'scripts'],
     function(){
+      gulp.src(['./app/img/**/*']).pipe(gulp.dest('./www/build/img')); 
+      gulp.src(['./app/data/**/*']).pipe(gulp.dest('./www/build/data'));
       gulpWatch('app/**/*.scss', function(){ gulp.start('sass'); });
       gulpWatch('app/**/*.html', function(){ gulp.start('html'); });
       buildBrowserify({ watch: true }).on('end', done);

@@ -1,0 +1,29 @@
+<ion-navbar *navbar primary>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title center>Categorias</ion-title>
+</ion-navbar>
+
+<ion-toolbar>
+  <ion-segment [(ngModel)]="findBy" [attr.light]="isAndroid ? '' : null" (change)="do_select_findBy($event, searchKey)">
+    <ion-segment-button value="especialidad">
+      Especialidad
+    </ion-segment-button>
+    <ion-segment-button value="doctor">
+      Doctor
+    </ion-segment-button> 
+    <ion-segment-button value="clinica">
+      Clinica
+    </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
+
+<ion-content>
+    <ion-searchbar [(ngModel)]="searchQuery" (input)="getItems($event, searchKey)"></ion-searchbar>
+    <ion-list>
+        <ion-item detail-push *ngFor="#item of items" (click)="goToDetail(item)" href="#">
+          {{item.descripcion}}
+        </ion-item>
+    </ion-list>
+</ion-content>

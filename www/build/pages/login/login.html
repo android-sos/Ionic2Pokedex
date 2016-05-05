@@ -1,0 +1,65 @@
+<ion-content class="has-header"  padding>
+<form [ngFormModel]="authForm" (ngSubmit)="onSubmit(authForm.value)">
+    <ion-list no-lines>
+      <ion-item >
+         <img src="build/img/logo_login.png"/>
+      </ion-item>
+
+      <ion-item  >
+        <ion-label floating favorite>Usuario</ion-label>
+        <ion-input type="text" value="" [ngFormControl]="username" ></ion-input>
+      </ion-item>
+       <div *ngIf="username.hasError('required') && username.touched" 
+            class="error-box">* Correo es reuqerido!</div>
+        <div *ngIf="username.hasError('minlength') && username.touched" 
+            class="error-box">* Longitud minima es de 8!</div>            
+        
+      <ion-item >
+        <ion-label floating favorite>Clave</ion-label>
+        <ion-input type="password" value="" [ngFormControl]="password" ></ion-input>
+      </ion-item> 
+      <div *ngIf="password.hasError('required') && password.touched" 
+            class="error-box">* Clave es requerida</div>    
+        <div *ngIf="password.hasError('minlength') && password.touched" 
+            class="error-box">* Longitud minima es de 8!</div>                       
+                 
+    </ion-list> 
+    
+    <ion-row center > 
+        <ion-col >
+            <button  outline block favorite type="submit">
+                <ion-icon>Entrar</ion-icon>
+            </button>
+        </ion-col>
+        <ion-col >
+            <button  outline block favorite>
+                <ion-icon>Cancelar</ion-icon>
+            </button>
+        </ion-col>
+    </ion-row>
+    <ion-row center>
+        <ion-col >
+            <button  outline block favorite>
+                <ion-icon name="logo-facebook"></ion-icon>
+            </button>
+        </ion-col>
+        <ion-col >
+            <button  outline block favorite>
+                <ion-icon name="logo-twitter"></ion-icon>
+            </button> 
+        </ion-col>
+    </ion-row>
+    <ion-row center>
+        <ion-col >
+            <button  outline block favorite>
+                <ion-icon name="contact"></ion-icon>
+            </button>   
+        </ion-col>
+    </ion-row> 
+</form>
+</ion-content>
+<style>
+  .login_test {
+    padding: 2;
+  }
+</style>

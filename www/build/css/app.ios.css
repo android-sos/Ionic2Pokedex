@@ -4533,25 +4533,6 @@ sup[dark],
 ion-icon[dark] {
   color: #222; }
 
-h1[favorite],
-h2[favorite],
-h3[favorite],
-h4[favorite],
-h5[favorite],
-h6[favorite],
-p[favorite],
-span[favorite],
-a:not([button])[favorite],
-small[favorite],
-b[favorite],
-i[favorite],
-strong[favorite],
-em[favorite],
-sub[favorite],
-sup[favorite],
-ion-icon[favorite] {
-  color: #69BB7B; }
-
 ion-action-sheet {
   position: absolute;
   top: 0;
@@ -4936,10 +4917,6 @@ ion-badge {
   color: #fff;
   background-color: #222; }
 
-.badge-favorite {
-  color: #fff;
-  background-color: #69BB7B; }
-
 .button {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -5199,29 +5176,6 @@ ion-button-effect {
   .button-clear-dark:hover:not(.disable-hover) {
     color: #222; }
 
-.button-favorite {
-  color: #fff;
-  background-color: #69BB7B; }
-  .button-favorite.activated {
-    background-color: #61ac71; }
-
-.button-outline-favorite {
-  border-color: #69BB7B;
-  color: #69BB7B;
-  background-color: transparent; }
-  .button-outline-favorite.activated {
-    color: #fff;
-    background-color: #69BB7B; }
-
-.button-clear-favorite {
-  border-color: transparent;
-  color: #69BB7B;
-  background-color: transparent; }
-  .button-clear-favorite.activated {
-    opacity: .4; }
-  .button-clear-favorite:hover:not(.disable-hover) {
-    color: #69BB7B; }
-
 .button-fab {
   position: absolute;
   overflow: hidden;
@@ -5375,8 +5329,8 @@ ion-checkbox {
   background-color: #fff; }
 
 .checkbox-checked {
-  border-color: #387ef5;
-  background-color: #387ef5; }
+  border-color: #fff;
+  background-color: #32db64; }
 
 .checkbox-checked .checkbox-inner {
   position: absolute;
@@ -5430,12 +5384,6 @@ ion-checkbox[dark] .checkbox-checked {
   border-color: #222;
   background-color: #222; }
   ion-checkbox[dark] .checkbox-checked .checkbox-inner {
-    border-color: #fff; }
-
-ion-checkbox[favorite] .checkbox-checked {
-  border-color: #69BB7B;
-  background-color: #69BB7B; }
-  ion-checkbox[favorite] .checkbox-checked .checkbox-inner {
     border-color: #fff; }
 
 ion-chip {
@@ -5510,10 +5458,6 @@ ion-chip ion-icon[light] {
 ion-chip ion-icon[dark] {
   color: #fff;
   background-color: #222; }
-
-ion-chip ion-icon[favorite] {
-  color: #fff;
-  background-color: #69BB7B; }
 
 [no-padding],
 [no-padding] scroll-content {
@@ -5967,7 +5911,7 @@ ion-item-sliding.active-slide.active-options ion-item-options {
     text-decoration: none; }
 
 .item.activated {
-  background-color: #d9d9d9;
+  background-color: #3aff74;
   -webkit-transition-duration: 0ms;
   transition-duration: 0ms; }
 
@@ -6065,10 +6009,6 @@ ion-item-divider[light] {
 ion-item-divider[dark] {
   color: #fff;
   background-color: #222; }
-
-ion-item-divider[favorite] {
-  color: #fff;
-  background-color: #69BB7B; }
 
 ion-item-sliding {
   background-color: #fff; }
@@ -6188,9 +6128,6 @@ ion-label[light] {
 
 ion-label[dark] {
   color: #222; }
-
-ion-label[favorite] {
-  color: #69BB7B; }
 
 ion-list-header {
   display: block;
@@ -6453,11 +6390,6 @@ ion-radio[dark] .radio-checked {
   ion-radio[dark] .radio-checked .radio-inner {
     border-color: #222; }
 
-ion-radio[favorite] .radio-checked {
-  color: #69BB7B; }
-  ion-radio[favorite] .radio-checked .radio-inner {
-    border-color: #69BB7B; }
-
 ion-searchbar {
   position: relative;
   display: -webkit-box;
@@ -6637,14 +6569,6 @@ ion-searchbar[dark] .searchbar-ios-cancel {
 .toolbar[dark] ion-searchbar .searchbar-ios-cancel {
   color: #fff; }
 
-ion-searchbar[favorite] .searchbar-ios-cancel {
-  color: #69BB7B; }
-  ion-searchbar[favorite] .searchbar-ios-cancel:hover:not(.disable-hover) {
-    color: #61ac71; }
-
-.toolbar[favorite] ion-searchbar .searchbar-ios-cancel {
-  color: #fff; }
-
 ion-segment {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6801,20 +6725,6 @@ ion-segment[dark] .segment-button {
 
 .toolbar[dark] .segment-button.segment-activated {
   color: #222; }
-
-ion-segment[favorite] .segment-button {
-  border-color: #69BB7B;
-  color: #69BB7B; }
-  ion-segment[favorite] .segment-button:hover:not(.segment-activated) {
-    background-color: rgba(105, 187, 123, 0.1); }
-  ion-segment[favorite] .segment-button:active:not(.segment-activated) {
-    background-color: rgba(105, 187, 123, 0.16); }
-  ion-segment[favorite] .segment-button.segment-activated {
-    color: #fff;
-    background-color: #69BB7B; }
-
-.toolbar[favorite] .segment-button.segment-activated {
-  color: #69BB7B; }
 
 ion-select {
   display: -webkit-box;
@@ -7173,15 +7083,6 @@ ion-tabs[dark] tabbar {
   ion-tabs[dark] tabbar .tab-button[aria-selected=true] {
     color: #fff; }
 
-ion-tabs[favorite] tabbar {
-  border-color: #4ba65f;
-  background-color: #69BB7B; }
-  ion-tabs[favorite] tabbar .tab-button {
-    color: #fff; }
-  ion-tabs[favorite] tabbar .tab-button:hover:not(.disable-hover),
-  ion-tabs[favorite] tabbar .tab-button[aria-selected=true] {
-    color: #fff; }
-
 ion-toggle {
   position: relative; }
 
@@ -7274,9 +7175,6 @@ ion-toggle[light] .toggle-checked {
 
 ion-toggle[dark] .toggle-checked {
   background-color: #222; }
-
-ion-toggle[favorite] .toggle-checked {
-  background-color: #69BB7B; }
 
 ion-toast {
   position: absolute;
@@ -7844,37 +7742,6 @@ ion-buttons[right] {
   .bar-button-solid-dark.activated {
     color: #fff;
     background-color: #343434; }
-
-.toolbar[favorite] .toolbar-background {
-  border-color: #4ba65f;
-  background: #69BB7B; }
-
-.toolbar[favorite] .toolbar-title,
-.toolbar[favorite] .bar-button-default {
-  color: #fff; }
-
-.bar-button-favorite {
-  color: #69BB7B;
-  background-color: transparent; }
-  .bar-button-favorite:hover:not(.disable-hover) {
-    color: #69BB7B; }
-  .bar-button-favorite.activated {
-    opacity: .4; }
-
-.bar-button-outline-favorite {
-  border-color: #61ac71;
-  color: #61ac71;
-  background-color: transparent; }
-  .bar-button-outline-favorite.activated {
-    color: #fff;
-    background-color: #61ac71; }
-
-.bar-button-solid-favorite {
-  color: #fff;
-  background-color: #69BB7B; }
-  .bar-button-solid-favorite.activated {
-    color: #fff;
-    background-color: #61ac71; }
 
 ion-navbar-section.statusbar-padding {
   height: calc(44px + 20px);

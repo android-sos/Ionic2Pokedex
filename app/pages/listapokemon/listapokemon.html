@@ -3,16 +3,35 @@
         <strong>Lista de pokemones</strong>
     </ion-title>
 </ion-navbar>
+<ion-toolbar [attr.primary]="isAndroid ? '' : null" >
+  <ion-segment [(ngModel)]="tipo" [attr.light]="isAndroid ? '' : null">
+    <ion-segment-button value="Grass">
+      Grass
+    </ion-segment-button>
+    <ion-segment-button value="Poison">
+      Poison
+    </ion-segment-button>
+    <ion-segment-button value="Fire">
+      Fire
+    </ion-segment-button>
+    <ion-segment-button value="Flying">
+      Flying
+    </ion-segment-button>
+     <ion-segment-button value="Normal">
+      Normal
+    </ion-segment-button>
+    <ion-segment-button value="Bug">
+      Bug
+    </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
+
+
 <ion-content>
     <loader text="Cargando Pokedex..." *ngIf="!pokemons.length"></loader>
     <ion-searchbar [(ngModel)]="searchQuery" (input)="getItems($event)"></ion-searchbar>
     <ion-list>
-        <a ion-item *ngFor="#pokemon of pokemons" (click)="goToDetail(pokemon)" href="#">
-            <ion-avatar item-left>
-              <img src="build/img/pokemons/{{ pokemon.name }}.jpg">
-            </ion-avatar>
-            <h2>{{ pokemon.name }}</h2>
-            <p>{{ pokemon.species }}</p>
-        </a>
+        <ion-item detail-push>Medicos</ion-item>
+        <ion-item detail-push>Odontologos</ion-item>
     </ion-list>
 </ion-content>

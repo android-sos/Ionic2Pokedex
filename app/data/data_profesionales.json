@@ -1,0 +1,60 @@
+
+[
+  {
+    "id": "001",
+    "descripcion": "Luis Alfonso Basques",
+    "especialidades": [
+      "Odontologo"
+    ],
+    "clinicas": [
+      "Centro Medico de Occidente",
+      "Clinico"
+      ]
+    },
+    {
+    "id": "002",
+    "descripcion": "Maria Teresa Quevedo",
+    "especialidades": [
+      "Medico Cirujano",
+      "Medicina General"
+      ],
+      "clinicas": [
+      "Clinica RO"
+      ]
+    },
+    {
+      "id": "003",
+      "descripcion": "Frank Martinez",
+      "especialidades": [
+        "Medico Cirujano",
+        "Medicina General"
+        ],
+        "clinicas": []
+    },
+    {
+      "id": "004",
+      "descripcion": "Ender Barboza",
+      "especialidades": [
+        "Medico Cirujano",
+        "Medicina General"
+      ], 
+        "clinicas": []
+    },
+    {
+      "id": "005",
+      "descripcion": "Dr. Angel paz",
+      "especialidades": [
+        "Cirujano"
+        ],
+        "clinicas": []
+    },
+    {
+      "id": "006",
+      "descripcion": "Dra. Maria Di Martino",
+      "especialidades": [
+        "Cirujano",
+        "Ortodoncista"
+        ],
+        "clinicas": []
+    }
+]
